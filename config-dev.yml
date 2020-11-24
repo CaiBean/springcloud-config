@@ -1,2 +1,21 @@
-config:
-  info: "master branch,spring-cloud/config-dev.yml,version=1"
+server:
+  port: ${port:8086}
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/day23
+    username: root
+    password: 123456
+  application:
+    name: producer
+mybatis:
+  type-aliases-package: com.itheima.pojo
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:12346/eureka/
+  instance:
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+    lease-renewal-interval-in-seconds: 5
+    lease-expiration-duration-in-seconds: 5
