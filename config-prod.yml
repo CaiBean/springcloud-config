@@ -1,0 +1,11 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:12345/eureka/
+    registry-fetch-interval-seconds: 10
+spring:
+  application:
+    name: consumer
+ribbon:
+  ConnectTimeout: 1000 # 连接超时时长
+  ReadTimeout: 2000 # 数据通信超时时长
